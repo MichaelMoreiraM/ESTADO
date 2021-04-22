@@ -8,6 +8,7 @@ import com.example.Estado.servicio.estadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
@@ -21,7 +22,8 @@ public class usuariocontroller {
     public String vercrud(){
         return"crudusuario";
     }
-    @RequestMapping("/")
+    @RequestMapping("/cargaestado")
+    @ResponseBody
     public List<Estado>listaEst(){
         return estadoserv.listaestado(); 
     }
