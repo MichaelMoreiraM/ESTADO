@@ -16,8 +16,8 @@ public class estarosServiImpl implements estadoService {
 
     @Override
     public List<Estado> listaestado() {
-        // TODO Auto-generated method stub
-        return null;
+        
+        return repository.findAll();
     }
     
 }
